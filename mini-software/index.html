@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="style.css">
+    <title>Clima</title>
+
+</head>
+
+<body class="weather-sunny">
+
+    <div class="app-container glass">
+        <h1>Clima Actual y Pronóstico</h1>
+
+        <div class="controls">
+            <input type="text" id="cityInput" placeholder="Escribe una ciudad (ej: Madrid, Lima)" />
+            <button onclick="buscarCiudad()">Buscar</button>
+            <button onclick="obtenerUbicacionActual()">Mi ubicación</button>
+        </div>
+
+        <div id="loading" class="loading">Cargando...</div>
+        <div id="error" class="error hidden"></div>
+
+        <div id="resultado" class="hidden">
+            <div id="current">
+                <h2 id="lugar">—</h2>
+                <div id="temp">—</div>
+                <div id="desc">—</div>
+                <div class="details">
+                    <div class="detail-item">
+                        <strong>Humedad</strong><br>
+                        <span id="humedad">—</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Viento</strong><br>
+                        <span id="viento">—</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Sensación</strong><br>
+                        <span id="sensacion">—</span>
+                    </div>
+                    <div class="detail-item">
+                        <strong>Presión</strong><br>
+                        <span id="presion">—</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3>Los proximos 6 días</h3>
+            <div id="forecast"></div>
+        </div>
+    </div>
+
+<footer>
+    <h2>© 2026 Angel Zambrano & Divina Ulloa Clima App.</h2>
+</footer>
+
+    <script src="script.js"> </script>
+</body>
+
+</html>

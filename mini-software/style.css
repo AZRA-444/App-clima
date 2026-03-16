@@ -1,0 +1,274 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", system-ui, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: background 0.8s ease;
+}
+
+
+.weather-sunny {
+    background: linear-gradient(135deg, #f6d365, #fda085);
+}
+
+.weather-partly-cloudy {
+    background: linear-gradient(135deg, #89f7fe, #66a6ff);
+}
+
+.weather-cloudy {
+    background: linear-gradient(135deg, #bdc3c7, #2c3e50);
+}
+
+.weather-rain {
+    background: linear-gradient(135deg, #4b6cb7, #182848);
+}
+
+.weather-storm {
+    background: linear-gradient(135deg, #141e30, #243b55);
+}
+
+.weather-thunderstorm {
+    background: linear-gradient(135deg, #000428, #004e92);
+}
+
+.weather-snow {
+    background: linear-gradient(135deg, #e6dada, #274046);
+}
+
+.weather-fog {
+    background: linear-gradient(135deg, #757f9a, #d7dde8);
+}
+
+
+.app-container {
+    width: auto;
+    padding: 30px;
+    border-radius: 25px;
+}
+
+
+.glass {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+h3 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.controls input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+.controls button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    transition: 0.3s;
+}
+
+.controls button:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+#temp {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.detail-item {
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    text-align: center;
+}
+
+#forecast {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(200, 200, 200, 0.5) transparent;
+}
+
+#forecast::-webkit-scrollbar {
+    height: 8px;
+}
+
+#forecast::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 10px;
+}
+
+#forecast::-webkit-scrollbar-thumb {
+    background-color: rgba(200, 200, 200, 0.5);
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+
+
+.day {
+    min-width: 80px;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.emoji {
+    font-size: 24px;
+    margin: 5px 0;
+}
+
+.loading {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.error {
+    color: #ffb3b3;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 0;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+
+    .app-container {
+        width: 90%;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    #temp {
+        font-size: 40px;
+    }
+
+    .controls {
+        flex-direction: column;
+    }
+
+    .controls input {
+        width: 100%;
+    }
+
+    .controls button {
+        width: 100%;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    body {
+        padding: 20px;
+    }
+
+    .app-container {
+        width: 100%;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    #temp {
+        font-size: 36px;
+    }
+
+    #forecast {
+        gap: 8px;
+    }
+
+    .day {
+        min-width: 70px;
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .emoji {
+        font-size: 20px;
+    }
+
+    .details {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (min-width: 1200px) {
+
+    .app-container {
+        width: 480px;
+    }
+
+}

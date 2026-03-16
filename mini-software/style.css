@@ -190,22 +190,6 @@ h3 {
     display: none;
 }
 
-
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 15px 0;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-top: 1px solid rgba(255, 255, 255, 0.25);
-    text-align: center;
-    color: white;
-    font-size: 14px;
-}
-
 @media (max-width: 768px) {
 
     .app-container {
